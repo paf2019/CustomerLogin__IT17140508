@@ -22,13 +22,13 @@ public class CustomerController {
 	@Autowired
 	 CustomerDAO customerDAO; 
 	
-	/* SAVE AN EMPLOYEE */
+	
 	 @PostMapping("/customers")
 	 public CustomerDetails createEmployee(@Valid @RequestBody CustomerDetails customer) {
 	 return customerDAO.save(customer);
 	 } 
 	 
-	 /* GET ALL EMPLOYEES*/
+	
 	 @GetMapping("/customers")
 	 public List<CustomerDetails> getAllEmployees(){
 	 return customerDAO.findAll();
